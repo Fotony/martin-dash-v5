@@ -7,104 +7,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background: radial-gradient(circle at top right, #1a2332, #0d1117); 
-            color: #e6edf3; 
-            font-family: 'Inter', sans-serif; 
-            min-height: 100vh;
-        }
-        .mega-tile {
-            background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(13, 17, 23, 0.95));
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(48, 54, 61, 0.6);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            padding: 30px;
-            transition: transform 0.3s ease;
-        }
+        body { background: radial-gradient(circle at top right, #1a2332, #0d1117); color: #e6edf3; font-family: 'Inter', sans-serif; min-height: 100vh; }
+        .mega-tile { background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(13, 17, 23, 0.95)); backdrop-filter: blur(20px); border: 1px solid rgba(48, 54, 61, 0.6); border-top: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); padding: 25px; transition: transform 0.3s ease; }
         .mega-tile:hover { transform: translateY(-5px); border-color: #58a6ff; }
         .stat-value { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: -1px; }
-        .label { color: #8b949e; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700; }
+        .label { color: #8b949e; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; }
     </style>
 </head>
-<body class="p-6 md:p-10">
-    
+<body class="p-6 md:p-8">
     <div class="max-w-7xl mx-auto">
-        <header class="mb-10 flex items-center justify-between">
-            <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                MISSION CONTROL
-            </h1>
-            <div class="hidden md:block text-green-400 text-sm font-mono bg-green-900/20 px-4 py-2 rounded-full border border-green-500/30">
-                ● SYSTEMS ONLINE
-            </div>
+        <header class="mb-8 flex items-center justify-between">
+            <h1 class="text-3xl md:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">MISSION CONTROL</h1>
+            <div class="text-green-400 text-xs font-mono bg-green-900/20 px-3 py-1 rounded-full border border-green-500/30">● LIVE</div>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <!-- CRYPTO TILE -->
+            <!-- 1. CRYPTO -->
             <div class="mega-tile">
-                <div class="flex justify-between items-end mb-6">
+                <div class="flex justify-between items-center mb-4">
                     <div class="label text-blue-400">Crypto Markets</div>
-                    <div class="text-4xl">🚀</div>
+                    <div class="text-2xl">🚀</div>
                 </div>
-                <div class="space-y-6">
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="text-xl">Bitcoin</span>
-                        <span class="stat-value text-2xl text-green-400">$94,521</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="text-xl">Ethereum</span>
-                        <span class="stat-value text-2xl text-yellow-400">$3,245</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="text-xl">Gonka (GNK)</span>
-                        <span class="stat-value text-2xl text-yellow-400">$0.73</span>
-                    </div>
-                    <div class="text-xs text-gray-500 mt-2">Target: $0.60 [WAITING]</div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center"><span class="text-lg">Bitcoin</span><span class="stat-value text-xl text-green-400">$94,521</span></div>
+                    <div class="flex justify-between items-center"><span class="text-lg">Ethereum</span><span class="stat-value text-xl text-yellow-400">$3,245</span></div>
+                    <div class="flex justify-between items-center"><span class="text-lg">Solana</span><span class="stat-value text-xl text-green-400">$178.00</span></div>
+                    <div class="flex justify-between items-center border-t border-gray-700 pt-3 mt-2"><span class="text-lg font-bold">Gonka (GNK)</span><span class="stat-value text-xl text-yellow-400">$0.73 [WAIT]</span></div>
                 </div>
             </div>
 
-            <!-- DEFI & MACRO TILE -->
+            <!-- 2. DEFI (LENDS) -->
             <div class="mega-tile">
-                <div class="flex justify-between items-end mb-6">
-                    <div class="label text-purple-400">DeFi & Macro</div>
-                    <div class="text-4xl">🌍</div>
+                <div class="flex justify-between items-center mb-4">
+                    <div class="label text-purple-400">DeFi Lending (HF)</div>
+                    <div class="text-2xl">🏦</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg"><span>Aave</span><span class="stat-value text-green-400">1.85</span></div>
+                    <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg"><span>Jupiter Lend</span><span class="stat-value text-green-400">2.10</span></div>
+                    <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg"><span>Venus</span><span class="stat-value text-green-400">1.77</span></div>
+                    <div class="text-xs text-gray-500 text-center mt-2">Target: Keep HF > 1.5</div>
+                </div>
+            </div>
+
+            <!-- 3. MACRO -->
+            <div class="mega-tile">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="label text-red-400">Macro Indicators</div>
+                    <div class="text-2xl">🌍</div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-black/20 p-4 rounded-xl">
-                        <div class="text-xs text-gray-500 mb-1">Aave H.F.</div>
-                        <div class="stat-value text-2xl text-green-400">1.85</div>
-                    </div>
-                    <div class="bg-black/20 p-4 rounded-xl">
-                        <div class="text-xs text-gray-500 mb-1">Jupiter H.F.</div>
-                        <div class="stat-value text-2xl text-green-400">2.10</div>
-                    </div>
-                    <div class="bg-black/20 p-4 rounded-xl">
-                        <div class="text-xs text-gray-500 mb-1">Oil (Brent)</div>
-                        <div class="stat-value text-xl text-red-400">$112.50</div>
-                    </div>
-                    <div class="bg-black/20 p-4 rounded-xl">
-                        <div class="text-xs text-gray-500 mb-1">Gold</div>
-                        <div class="stat-value text-xl text-blue-400">$2,345</div>
-                    </div>
+                    <div class="bg-black/20 p-3 rounded-lg text-center"><div class="text-xs text-gray-500">Oil (Brent)</div><div class="stat-value text-lg text-red-400">$112.50</div></div>
+                    <div class="bg-black/20 p-3 rounded-lg text-center"><div class="text-xs text-gray-500">Gold</div><div class="stat-value text-lg text-yellow-400">$2,345</div></div>
+                    <div class="bg-black/20 p-3 rounded-lg text-center col-span-2"><div class="text-xs text-gray-500">USD / RUB</div><div class="stat-value text-lg text-blue-400">92.50</div></div>
                 </div>
             </div>
 
-            <!-- FLINT INSIGHTS TILE -->
-            <div class="mega-tile md:col-span-2">
-                <div class="flex justify-between items-end mb-6">
+            <!-- 4. FLINT INSIGHTS -->
+            <div class="mega-tile">
+                <div class="flex justify-between items-center mb-4">
                     <div class="label text-orange-400">Flint Intelligence</div>
-                    <div class="text-4xl">🕵️</div>
+                    <div class="text-2xl">🕵️</div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-4 bg-blue-900/10 border border-blue-500/20 rounded-xl">
-                        <h4 class="text-blue-400 font-bold mb-1">Нефтяной шок</h4>
-                        <p class="text-sm text-gray-300">Угрозы Ирану подняли Brent выше $110. Это создает инфляционное давление на США и бьет по рисковым активам, включая BTC.</p>
+                <div class="space-y-3 text-sm text-gray-300">
+                    <div class="p-3 bg-blue-900/10 border-l-2 border-blue-500 rounded">
+                        <b class="text-blue-400">Нефтяной шок:</b> Угрозы Ирану подняли Brent >$110. Инфляционное давление на США и риски для BTC.
                     </div>
-                    <div class="p-4 bg-yellow-900/10 border border-yellow-500/20 rounded-xl">
-                        <h4 class="text-yellow-400 font-bold mb-1">Риски GNK</h4>
-                        <p class="text-sm text-gray-300">Наблюдается аномальный разброс цен на разных биржах. Признак низкой ликвидности. Вход только по цели <$0.60.</p>
+                    <div class="p-3 bg-yellow-900/10 border-l-2 border-yellow-500 rounded">
+                        <b class="text-yellow-400">GNK Риск:</b> Аномальный разброс цен. Признак низкой ликвидности. Цель входа <$0.60.
                     </div>
                 </div>
             </div>
